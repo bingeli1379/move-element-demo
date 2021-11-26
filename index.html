@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body, html {
+      margin: 0;
+    }
+
+    .container {
+      position: relative;
+      overflow: hidden;
+      z-index: 100;
+    }
+
+    .box {
+      height: 500px;
+      background-color: aquamarine;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    .box > div {
+      width: 33.3333%;
+    }
+
+    .card {
+      border: 2px solid #333;
+      width: 300px;
+      height: 300px;
+      font-size: 1.25rem;
+      letter-spacing: 0.25rem;
+      text-align: center;
+      opacity: 0;
+      transform: scale(0.5);
+      transition: transform .7s ease, opacity .7s ease;
+      display: flex;
+      flex-direction: column;
+      z-index: 1;
+      margin: auto;
+    }
+
+    .card-move {
+      user-select: none;
+      cursor: move;
+      background-color: cadetblue;
+    }
+
+    .card-body {
+      flex-grow: 1;
+      overflow: auto;
+      background-color: rgb(215, 235, 226);
+    }
+
+    .card-init {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .bg {
+      background-position: center;
+      background-size: cover;
+      background-attachment: fixed;
+    }
+
+    .bg1 {
+      background-image: url('https://images.unsplash.com/photo-1637768442356-ff9106755d41?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+    }
+
+    .bg2 {
+      background-image: url('https://images.unsplash.com/photo-1586227740560-8cf2732c1531?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1261&q=80');
+    }
+    
+    .bg3 {
+      background-image: url('https://images.unsplash.com/photo-1637773509361-d1f772379021?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80');
+    }
+    
+    .bg4 {
+      background-image: url('https://images.unsplash.com/photo-1637781593439-c8571c106222?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+    }
+    
+    .bg5 {
+      background-image: url('https://images.unsplash.com/photo-1637779692999-26cdadc69c1f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box">
+      <div>
+        <div class="card">
+          <div class="card-move">
+            move
+          </div>
+          <div class="card-body">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et laudantium molestias eos perspiciatis quibusdam ducimus ipsum officia blanditiis autem eum soluta fuga maiores aperiam, eligendi quas quia modi debitis voluptas!
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="card">
+          <div class="card-move">
+            move
+          </div>
+          <div class="card-body">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et laudantium molestias eos perspiciatis quibusdam ducimus ipsum officia blanditiis autem eum soluta fuga maiores aperiam, eligendi quas quia modi debitis voluptas!
+          </div>
+        </div>
+      </div>
+      
+      <div>
+        <div class="card">
+          <div class="card-move">
+            move
+          </div>
+          <div class="card-body">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et laudantium molestias eos perspiciatis quibusdam ducimus ipsum officia blanditiis autem eum soluta fuga maiores aperiam, eligendi quas quia modi debitis voluptas!
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et laudantium molestias eos perspiciatis quibusdam ducimus ipsum officia blanditiis autem eum soluta fuga maiores aperiam, eligendi quas quia modi debitis voluptas!
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et laudantium molestias eos perspiciatis quibusdam ducimus ipsum officia blanditiis autem eum soluta fuga maiores aperiam, eligendi quas quia modi debitis voluptas!
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="box bg bg1"></div>
+    <div class="box">
+      <div>
+        <div class="card">
+          <div class="card-move">
+            move
+          </div>
+          <div class="card-body">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et laudantium molestias eos perspiciatis quibusdam ducimus ipsum officia blanditiis autem eum soluta fuga maiores aperiam, eligendi quas quia modi debitis voluptas!
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="card">
+          <div class="card-move">
+            move
+          </div>
+          <div class="card-body">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et laudantium molestias eos perspiciatis quibusdam ducimus ipsum officia blanditiis autem eum soluta fuga maiores aperiam, eligendi quas quia modi debitis voluptas!
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="card">
+          <div class="card-move">
+            move
+          </div>
+          <div class="card-body">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et laudantium molestias eos perspiciatis quibusdam ducimus ipsum officia blanditiis autem eum soluta fuga maiores aperiam, eligendi quas quia modi debitis voluptas!
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="box bg bg2"></div>
+    <div class="box">
+      <div>
+        <div class="card">
+          <div class="card-move">
+            move
+          </div>
+          <div class="card-body">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et laudantium molestias eos perspiciatis quibusdam ducimus ipsum officia blanditiis autem eum soluta fuga maiores aperiam, eligendi quas quia modi debitis voluptas!
+          </div>
+        </div>
+      </div>
+      
+      <div>
+        <div class="card">
+          <div class="card-move">
+            move
+          </div>
+          <div class="card-body">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et laudantium molestias eos perspiciatis quibusdam ducimus ipsum officia blanditiis autem eum soluta fuga maiores aperiam, eligendi quas quia modi debitis voluptas!
+          </div>
+        </div>
+      </div>
+      
+      <div>
+        <div class="card">
+          <div class="card-move">
+            move
+          </div>
+          <div class="card-body">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et laudantium molestias eos perspiciatis quibusdam ducimus ipsum officia blanditiis autem eum soluta fuga maiores aperiam, eligendi quas quia modi debitis voluptas!
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="box bg bg3"></div>
+    <div class="box">
+      <div>
+        <div class="card">
+          <div class="card-move">
+            move
+          </div>
+          <div class="card-body">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et laudantium molestias eos perspiciatis quibusdam ducimus ipsum officia blanditiis autem eum soluta fuga maiores aperiam, eligendi quas quia modi debitis voluptas!
+          </div>
+        </div>
+      </div>
+      
+      <div>
+        <div class="card">
+          <div class="card-move">
+            move
+          </div>
+          <div class="card-body">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et laudantium molestias eos perspiciatis quibusdam ducimus ipsum officia blanditiis autem eum soluta fuga maiores aperiam, eligendi quas quia modi debitis voluptas!
+          </div>
+        </div>
+      </div>
+      
+      <div>
+        <div class="card">
+          <div class="card-move">
+            move
+          </div>
+          <div class="card-body">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et laudantium molestias eos perspiciatis quibusdam ducimus ipsum officia blanditiis autem eum soluta fuga maiores aperiam, eligendi quas quia modi debitis voluptas!
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="box bg bg4"></div>
+    <div class="box">
+      <div>
+        <div class="card">
+          <div class="card-move">
+            move
+          </div>
+          <div class="card-body">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et laudantium molestias eos perspiciatis quibusdam ducimus ipsum officia blanditiis autem eum soluta fuga maiores aperiam, eligendi quas quia modi debitis voluptas!
+          </div>
+        </div>
+      </div>
+      
+      <div>
+        <div class="card">
+          <div class="card-move">
+            move
+          </div>
+          <div class="card-body">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et laudantium molestias eos perspiciatis quibusdam ducimus ipsum officia blanditiis autem eum soluta fuga maiores aperiam, eligendi quas quia modi debitis voluptas!
+          </div>
+        </div>
+      </div>
+      
+      <div>
+        <div class="card">
+          <div class="card-move">
+            move
+          </div>
+          <div class="card-body">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et laudantium molestias eos perspiciatis quibusdam ducimus ipsum officia blanditiis autem eum soluta fuga maiores aperiam, eligendi quas quia modi debitis voluptas!
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="box bg bg5"></div>
+  </div>
+
+  <script>
+    // 滾動顯示
+    window.addEventListener('scroll', (e) => {
+      const displayOffsetY = window.pageYOffset + (window.innerHeight / 7 * 5)
+      document.querySelectorAll('.card').forEach(el => {
+        const isShow = getOffsetTop(el) < displayOffsetY
+        if (isShow) el.classList.add('card-init')
+      })
+    })
+    function getOffsetTop(el) {
+      const offsetTop = el.offsetTop
+      if (el.offsetParent) return offsetTop + getOffsetTop(el.offsetParent)
+      else return offsetTop
+    }
+    window.dispatchEvent(new Event('scroll'))
+
+    // 移動
+    let offsetX = 0
+    let offsetY = 0
+    let moveEl = null
+    let cardList = [...document.querySelectorAll('.card')]
+    cardList.forEach(el => {
+      el.addEventListener('mousedown', e => {
+        const isMoveTarget = e.target.classList.contains('card-move')
+        if (!isMoveTarget) return
+        offsetX = e.offsetX
+        offsetY = e.offsetY
+        moveEl = el
+        cardList = cardList.reduce((list, card) => {
+          if (card === el) list.unshift(card)
+          else list.push(card)
+          return list
+        }, [])
+        cardList.forEach((card, i)=> {
+          card.style.zIndex = cardList.length - i
+        })
+      })
+    })
+    window.addEventListener('mouseup', e => {
+      offsetX = 0
+      offsetY = 0
+      moveEl = null
+    })
+    window.addEventListener('mousemove', e => {
+      if (!moveEl) return
+      moveEl.style.position = 'absolute'
+      moveEl.style.left = (e.pageX - offsetX) + 'px'
+      moveEl.style.top = (e.pageY - offsetY) + 'px'
+    })
+  </script>
+</body>
+</html>

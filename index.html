@@ -14,6 +14,7 @@
       position: relative;
       overflow: hidden;
       z-index: 100;
+      min-width: 1200px;
     }
 
     .box {
@@ -304,17 +305,48 @@
           card.style.zIndex = cardList.length - i
         })
       })
+      el.addEventListener('touchstart', e => {
+        const isMoveTarget = e.target.classList.contains('card-move')
+        if (!isMoveTarget) return
+        document.body.style.overflow = 'hidden'
+        const rect = el.getBoundingClientRect()
+        offsetX = e.touches[0].clientX - rect.left
+        offsetY = e.touches[0].clientY - rect.top
+        moveEl = el
+        cardList = cardList.reduce((list, card) => {
+          if (card === el) list.unshift(card)
+          else list.push(card)
+          return list
+        }, [])
+        cardList.forEach((card, i)=> {
+          card.style.zIndex = cardList.length - i
+        })
+      })
     })
+
     window.addEventListener('mouseup', e => {
       offsetX = 0
       offsetY = 0
       moveEl = null
     })
+    window.addEventListener('touchend', e => {
+      document.body.style.overflow = 'auto'
+      offsetX = 0
+      offsetY = 0
+      moveEl = null
+    })
+
     window.addEventListener('mousemove', e => {
       if (!moveEl) return
       moveEl.style.position = 'absolute'
       moveEl.style.left = (e.pageX - offsetX) + 'px'
       moveEl.style.top = (e.pageY - offsetY) + 'px'
+    })
+    window.addEventListener('touchmove', e => {
+      if (!moveEl) return
+      moveEl.style.position = 'absolute'
+      moveEl.style.left = (e.touches[0].pageX - offsetX) + 'px'
+      moveEl.style.top = (e.touches[0].pageY - offsetY) + 'px'
     })
   </script>
 </body>
